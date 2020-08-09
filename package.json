@@ -1,7 +1,7 @@
 {
-  "name": "boilermaker",
+  "name": "june-fusuma",
   "version": "2.0.0",
-  "description": "Some boilerplate code to get you started - get shakin'!",
+  "description": "E-commerce website for premium streetwear.",
   "engines": {
     "node": "~12.11.1"
   },
@@ -41,6 +41,8 @@
   "author": "Fullstack Academy of Code",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "axios": "^0.19.0",
     "compression": "^1.7.3",
     "connect-session-sequelize": "^6.0.0",
