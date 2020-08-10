@@ -15,9 +15,7 @@ import {
   List,
   Divider,
   ListItem,
-  ListItemIcon,
-  ListItemText,
-  Hidden
+  ListItemText
 } from '@material-ui/core'
 import {makeStyles, useTheme} from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu'
@@ -120,24 +118,30 @@ function Navbar({handleClick, isLoggedIn}) {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
-            JUNFUSUMAデブ
-          </Typography>
+          <Typography variant="h6" className={classes.title} />
           <nav>
             {isLoggedIn ? (
               <div>
-                <a href="#" onClick={handleClick}>
+                <a
+                  href="#"
+                  onClick={handleClick}
+                  className={classes.toolbarLink}
+                >
                   Logout
                 </a>
-                <Link to="/cart" style={{margin: 0}}>
+                <Link to="/cart" className={classes.toolbarLink}>
                   <ShoppingCart />
                 </Link>
               </div>
             ) : (
               <div>
-                <Link to="/login">Login</Link>
-                <Link to="/signup">Sign Up</Link>
-                <Link to="/cart">
+                <Link to="/login" className={classes.toolbarLink}>
+                  Login
+                </Link>
+                <Link to="/signup" className={classes.toolbarLink}>
+                  Sign Up
+                </Link>
+                <Link to="/cart" className={classes.toolbarLink}>
                   <ShoppingCart />
                 </Link>
               </div>
@@ -163,7 +167,9 @@ function Navbar({handleClick, isLoggedIn}) {
         <List>
           {['HOME', 'SHOP', 'COLLECTIONS', 'ABOUT'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemText primary={text} />
+              <Link to={text.toLowerCase()}>
+                <ListItemText primary={text} />
+              </Link>
             </ListItem>
           ))}
         </List>
@@ -171,7 +177,9 @@ function Navbar({handleClick, isLoggedIn}) {
         <List>
           {['FAQ', 'CONTACT', 'SIZE CHART'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemText primary={text} />
+              <Link to={text.toLowerCase()}>
+                <ListItemText primary={text} />
+              </Link>
             </ListItem>
           ))}
         </List>
