@@ -4,7 +4,8 @@ import {
   Grid,
   Accordion,
   AccordionSummary,
-  AccordionDetails
+  AccordionDetails,
+  Divider
 } from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
@@ -22,7 +23,6 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 20
   },
   subtitle: {
-    paddingTop: 30,
     paddingBottom: 15
   },
   text: {
@@ -35,6 +35,12 @@ export const FAQ = () => {
   const classes = useStyles()
   return (
     <Grid container component="main" className={classes.root} justify="center">
+      <Grid xs={12}>
+        <Typography align="center" variant="h3" className={classes.title}>
+          JUNFUSUMAデブ
+        </Typography>
+        <Divider />
+      </Grid>
       <Grid xs={6} direction="column">
         <Typography align="center" variant="h4" className={classes.subtitle}>
           FAQ
@@ -114,7 +120,7 @@ export const FAQ = () => {
             <Typography variant="body2">
               After you hit that sweet juicy order confirm, please allow 3-5
               business days for order processing. After that, you'll get it when
-              you get it. A USPS tracking nubmer will not be provided.
+              you get it. A USPS tracking number will not be provided.
             </Typography>
           </AccordionDetails>
           <AccordionDetails>
@@ -127,7 +133,7 @@ export const FAQ = () => {
               Yes. Currently our online shop supports international shipping to
               over 2 different countries (US & Texas). Please fill out your
               shipping address on the checkout page to see if shipping is
-              avilable. If it is unavilable, contact us and we'll work some
+              avilable. If it is unavailable, contact us and we'll work some
               magic.
             </Typography>
           </AccordionDetails>

@@ -33,7 +33,7 @@ export const About = () => {
   return (
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12}>
-        <Typography align="center" variant="h2" className={classes.title}>
+        <Typography align="center" variant="h3" className={classes.title}>
           JUNFUSUMAデブ
         </Typography>
         <Divider />

@@ -15,6 +15,7 @@ import {
   List,
   Divider,
   ListItem,
+  Grid,
   ListItemText
 } from '@material-ui/core'
 import {makeStyles, useTheme} from '@material-ui/core/styles'
@@ -22,6 +23,9 @@ import MenuIcon from '@material-ui/icons/Menu'
 import ShoppingCart from '@material-ui/icons/ShoppingCart'
 import ChevronLeft from '@material-ui/icons/ChevronLeft'
 import ChevronRight from '@material-ui/icons/ChevronRight'
+import YouTubeIcon from '@material-ui/icons/YouTube'
+import InstagramIcon from '@material-ui/icons/Instagram'
+import FacebookIcon from '@material-ui/icons/Facebook'
 
 const drawerWidth = 240
 
@@ -82,6 +86,11 @@ const useStyles = makeStyles(theme => ({
       duration: theme.transitions.duration.enteringScreen
     }),
     marginLeft: 0
+  },
+  copyright: {
+    paddingTop: 32,
+    paddingLeft: 16,
+    paddingRight: 16
   }
 }))
 
@@ -167,7 +176,7 @@ function Navbar({handleClick, isLoggedIn}) {
         <List>
           {['HOME', 'SHOP', 'COLLECTIONS', 'ABOUT'].map((text, index) => (
             <ListItem button key={text}>
-              <Link to={text.toLowerCase()}>
+              <Link to={`/${text.toLowerCase()}`}>
                 <ListItemText primary={text} />
               </Link>
             </ListItem>
@@ -175,14 +184,35 @@ function Navbar({handleClick, isLoggedIn}) {
         </List>
         <Divider />
         <List>
-          {['FAQ', 'CONTACT', 'SIZE CHART'].map((text, index) => (
+          {['FAQ', 'CONTACT'].map((text, index) => (
             <ListItem button key={text}>
-              <Link to={text.toLowerCase()}>
+              <Link to={`/${text.toLowerCase()}`}>
                 <ListItemText primary={text} />
               </Link>
             </ListItem>
           ))}
         </List>
+        <Grid direction="row" style={{paddingLeft: 2}}>
+          <IconButton
+            color="default"
+            href="https://www.instagram.com/rocky110907"
+          >
+            <InstagramIcon />
+          </IconButton>
+          <IconButton color="default">
+            <FacebookIcon />
+          </IconButton>
+          <IconButton
+            color="default"
+            href="https://www.youtube.com/channel/UCPQfv6uzy-EOTxJVk3adJIg/videos"
+          >
+            <YouTubeIcon />
+          </IconButton>
+        </Grid>
+        <Divider />
+        <Typography variant="caption" className={classes.copyright}>
+          ©2020 COCO FUSUMA
+        </Typography>
       </Drawer>
     </div>
   )
