@@ -1,5 +1,5 @@
 import React from 'react'
-import {Typography, Grid, Divider, Button} from '@material-ui/core'
+import {Typography, Grid, Divider} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
@@ -18,23 +18,12 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 20
   },
   subtitle: {
-    paddingTop: 40,
+    paddingTop: 30,
     paddingBottom: 15
   },
   text: {
     marginTop: 20,
     width: '50%'
-  },
-  paper: {
-    margin: theme.spacing(8, 4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
-  },
-  button: {
-    borderRadius: 50,
-    backgroundColor: '#000',
-    color: '#fff'
   }
 }))
 
@@ -70,6 +59,12 @@ export const About = () => {
             purposefully: to make you think like Jun, look good like Jun, and to
             ultimately become Jun. Fueled by one purpose; to create enough Juns
             that will one day come together to form the ultimate boy band.
+          </Typography>
+          <Typography align="center" variant="caption" style={{marginTop: 20}}>
+            A worldwide campaign based in New York, New York.
+          </Typography>
+          <Typography align="center" variant="caption">
+            By a kid with broken shoulders, you can still lean on Jun.
           </Typography>
         </Grid>
       </Grid>
