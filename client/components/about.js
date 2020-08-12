@@ -6,7 +6,7 @@ import {Header} from './header'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '90vh'
+    height: '200vh'
   },
   image: {
     backgroundImage: 'url(https://i.imgur.com/IxamB99.jpg)',
@@ -15,6 +15,18 @@ const useStyles = makeStyles(theme => ({
     width: '40vw',
     minHeight: '40vh'
   },
+  image2: {
+    backgroundImage: 'url(https://i.imgur.com/gqnyUuQ.jpg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    width: '20vw',
+    minHeight: '40vh'
+  },
+  image3: {
+    backgroundImage: 'url(https://i.imgur.com/gqnyUuQ.jpg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
+  },
   subtitle: {
     paddingTop: 30,
     paddingBottom: 15
@@ -22,6 +34,10 @@ const useStyles = makeStyles(theme => ({
   text: {
     marginTop: 20,
     width: '50%'
+  },
+  stealThatLook: {
+    paddingLeft: '10%',
+    paddingRight: '10%'
   }
 }))
 
@@ -32,13 +48,7 @@ export const About = () => {
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12}>
         <Header />
-        <Grid
-          container
-          spacing={0}
-          direction="column"
-          alignItems="center"
-          style={{height: '84vh'}}
-        >
+        <Grid container spacing={0} direction="column" alignItems="center">
           <Typography variant="h4" className={classes.subtitle}>
             ABOUT OUR BRAND
           </Typography>
@@ -61,6 +71,25 @@ export const About = () => {
           <Typography align="center" variant="caption">
             By a kid with broken shoulders, you can still lean on Jun.
           </Typography>
+          <Typography variant="h4" className={classes.subtitle}>
+            STEAL JUN'S LOOK
+          </Typography>
+          <Grid container direction="row" className={classes.stealThatLook}>
+            <Grid xs={4} className={classes.image2} />
+            <Grid container xs={8} direction="column">
+              <Grid container xs={6} direction="row">
+                <Grid xs={3} className={classes.image3} />
+
+                <Grid xs={3}>
+                  <Typography variant="caption">
+                    Fendi Square Acetate Sunglasses - $385
+                  </Typography>
+                </Grid>
+              </Grid>
+
+              <Typography>hello</Typography>
+            </Grid>
+          </Grid>
         </Grid>
       </Grid>
       <Footer />
