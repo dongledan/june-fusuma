@@ -154,14 +154,14 @@ function Navbar({handleClick, isLoggedIn}) {
                   className={classes.toolbarLink}
                   style={{color: '#000'}}
                 >
-                  Login
+                  LOGIN
                 </Link>
                 <Link
                   to="/signup"
                   className={classes.toolbarLink}
                   style={{color: '#000'}}
                 >
-                  Sign Up
+                  SIGN UP
                 </Link>
                 <Link
                   to="/cart"

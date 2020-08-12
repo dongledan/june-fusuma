@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     marginLeft: 16,
+    marginRight: 16,
     marginBottom: -15,
     letterSpacing: 2
   },
@@ -63,7 +64,8 @@ const useStyles = makeStyles(theme => ({
     paddingRight: 17,
     letterSpacing: 2,
     marginLeft: 16,
-    marginTop: 40,
+    marginRight: 16,
+    marginTop: 20,
     width: '13ch'
   },
   subtitle2: {
@@ -72,6 +74,16 @@ const useStyles = makeStyles(theme => ({
   },
   container: {
     margin: 0
+  },
+  error: {
+    color: 'red',
+    marginLeft: 16,
+    marginRight: 16
+  },
+  line: {
+    marginLeft: 16,
+    marginRight: 16,
+    color: '#b28b5e'
   }
 }))
 /**
@@ -81,6 +93,7 @@ const AuthForm = props => {
   const {name, displayName, handleSubmit, error} = props
   const classes = useStyles()
 
+  const endOrStart = displayName === 'Sign Up' ? 'end' : 'start'
   return (
     <div>
       <Header />
@@ -120,7 +133,13 @@ const AuthForm = props => {
             ''
           )}
 
-          <Grid container xs={6} direction="column" className={classes.grid}>
+          <Grid
+            container
+            xs={6}
+            direction="column"
+            alignItems={displayName === 'Sign Up' ? 'flex-end' : 'flex-start'}
+            className={classes.grid}
+          >
             <Typography
               htmlFor="email"
               variant="caption"
@@ -129,7 +148,16 @@ const AuthForm = props => {
               EMAIL ADDRESS <text style={{color: 'red'}}>*</text>
             </Typography>
 
-            <TextField variant="outlined" name="email" />
+            <TextField
+              variant="outlined"
+              name="email"
+              inputProps={{
+                min: 0,
+                style: {
+                  textAlign: endOrStart
+                }
+              }}
+            />
             <Typography
               htmlFor="password"
               variant="caption"
@@ -137,8 +165,26 @@ const AuthForm = props => {
             >
               PASSWORD <text style={{color: 'red'}}>*</text>
             </Typography>
-            <TextField variant="outlined" name="password" />
-            <Button className={classes.button}>{displayName}</Button>
+            <TextField
+              variant="outlined"
+              type="password"
+              name="password"
+              inputProps={{
+                min: 0,
+                style: {
+                  textAlign: endOrStart
+                }
+              }}
+            />
+            {error && error.response ? (
+              <div className={classes.error}> {error.response.data} </div>
+            ) : (
+              <div className={classes.line}>────</div>
+            )}
+
+            <Button className={classes.button} type="submit">
+              {displayName}
+            </Button>
             <a style={{margin: 16, color: '#b28b5e'}} href="/auth/google">
               {displayName} with Google
             </a>
@@ -158,7 +204,6 @@ const AuthForm = props => {
             ''
           )}
         </Grid>
-        {error && error.response && <div> {error.response.data} </div>}
       </form>
       <Footer />
     </div>
