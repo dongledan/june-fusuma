@@ -35,7 +35,7 @@ export const About = () => {
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12}>
         <Typography align="center" variant="h3" className={classes.title}>
-          JUNFUSUMAデブ
+          JUNFUSUMA
         </Typography>
         <Divider />
         <Grid
@@ -45,7 +45,7 @@ export const About = () => {
           alignItems="center"
           style={{height: '84vh'}}
         >
-          <Typography variant="h5" className={classes.subtitle}>
+          <Typography variant="h4" className={classes.subtitle}>
             ABOUT OUR BRAND
           </Typography>
           <Typography variant="body2" style={{marginBottom: 40}}>

@@ -32,10 +32,10 @@ export const Privacy = () => {
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12}>
         <Typography align="center" variant="h3" className={classes.title}>
-          JUNFUSUMAデブ
+          JUNFUSUMA
         </Typography>
         <Divider />
-        <Typography variant="h5" align="center" className={classes.subtitle}>
+        <Typography variant="h4" align="center" className={classes.subtitle}>
           PRIVACY
         </Typography>
         <Grid
