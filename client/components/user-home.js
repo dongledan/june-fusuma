@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {Typography, Grid, CssBaseline, Button} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
@@ -24,7 +25,7 @@ const useStyles = makeStyles(theme => ({
   },
   button: {
     borderRadius: 50,
-    backgroundColor: '#b28b5e',
+    backgroundColor: '#000',
     fontWeight: '100',
     color: '#fff',
     paddingLeft: 17,
@@ -64,17 +65,24 @@ export const UserHome = props => {
           </Typography>
           <Typography
             variant="h6"
-            style={{color: '#fff', marginTop: -10, paddingBottom: 20}}
+            style={{color: '#fff', marginTop: -10, paddingBottom: 40}}
           >
             2020
           </Typography>
           <Typography
             variant="h5"
-            style={{color: '#b28b5e', paddingBottom: 40}}
+            style={{
+              color: '#b28b5e',
+              paddingBottom: 50,
+              fontSize: 18,
+              letterSpacing: 3
+            }}
           >
             LIMITED SAMPLE RUN
           </Typography>
-          <Button className={classes.button}>SHOP</Button>
+          <Link to="/shop">
+            <Button className={classes.button}>SHOP</Button>
+          </Link>
         </Grid>
       </Grid>
       <Footer />

@@ -196,6 +196,7 @@ function Navbar({handleClick, isLoggedIn}) {
               to={`/${text.toLowerCase()}`}
               key={text}
               style={{color: '#000'}}
+              onClick={handleDrawerClose}
             >
               <ListItem button>
                 <ListItemText
@@ -219,6 +220,7 @@ function Navbar({handleClick, isLoggedIn}) {
               to={`/${text.toLowerCase()}`}
               key={text}
               style={{color: '#000'}}
+              onClick={handleDrawerClose}
             >
               <ListItem button>
                 <ListItemText

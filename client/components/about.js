@@ -2,6 +2,7 @@ import React from 'react'
 import {Typography, Grid, Divider} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import {Footer} from './footer'
+import {Header} from './header'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -13,10 +14,6 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     width: '40vw',
     minHeight: '40vh'
-  },
-  title: {
-    paddingTop: 10,
-    paddingBottom: 20
   },
   subtitle: {
     paddingTop: 30,
@@ -34,10 +31,7 @@ export const About = () => {
   return (
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12}>
-        <Typography align="center" variant="h3" className={classes.title}>
-          JUNFUSUMA
-        </Typography>
-        <Divider />
+        <Header />
         <Grid
           container
           spacing={0}

@@ -1,15 +1,12 @@
 import React from 'react'
-import {Typography, Grid, Divider} from '@material-ui/core'
+import {Typography, Grid} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import {Footer} from './footer'
+import {Header} from './header'
 
 const useStyles = makeStyles(theme => ({
   root: {
     height: '90vh'
-  },
-  title: {
-    paddingTop: 10,
-    paddingBottom: 20
   },
   subheader: {
     paddingTop: 30,
@@ -31,10 +28,7 @@ export const Privacy = () => {
   return (
     <Grid container component="main" className={classes.root}>
       <Grid item xs={12}>
-        <Typography align="center" variant="h3" className={classes.title}>
-          JUNFUSUMA
-        </Typography>
-        <Divider />
+        <Header />
         <Typography variant="h4" align="center" className={classes.subtitle}>
           PRIVACY
         </Typography>

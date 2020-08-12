@@ -18,8 +18,14 @@ const theme = createMuiTheme({
       color: '#FFF',
       backgroundColor: '#000'
     },
+    h2: {
+      fontFamily: 'Emblema One'
+    },
     h3: {
       fontFamily: 'Knewave'
+    },
+    h4: {
+      fontFamily: 'Emblema One'
     }
   }
 })
