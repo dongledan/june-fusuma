@@ -4,7 +4,8 @@ import {makeStyles} from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   copyright: {
-    padding: 16
+    padding: 16,
+    marginLeft: 10
   }
 }))
 
@@ -16,7 +17,7 @@ export const Copyright = () => {
       color="textSecondary"
       className={classes.copyright}
     >
-      {'©'}
+      {'© '}
       {new Date().getFullYear()} COCO FUSUMA
     </Typography>
   )

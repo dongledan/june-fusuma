@@ -67,7 +67,7 @@ export const UserHome = props => {
           </Typography>
           <Typography
             variant="h5"
-            style={{color: '#DE5D83', paddingBottom: 40}}
+            style={{color: '#b28b5e', paddingBottom: 40}}
           >
             LIMITED SAMPLE RUN
           </Typography>

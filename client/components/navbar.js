@@ -198,7 +198,16 @@ function Navbar({handleClick, isLoggedIn}) {
               style={{color: '#000'}}
             >
               <ListItem button>
-                <ListItemText primary={text} />
+                <ListItemText
+                  primary={
+                    <Typography
+                      type="body2"
+                      style={{fontSize: 14, marginLeft: 10}}
+                    >
+                      {text}
+                    </Typography>
+                  }
+                />
               </ListItem>
             </Link>
           ))}
@@ -212,12 +221,21 @@ function Navbar({handleClick, isLoggedIn}) {
               style={{color: '#000'}}
             >
               <ListItem button>
-                <ListItemText primary={text} />
+                <ListItemText
+                  primary={
+                    <Typography
+                      type="body2"
+                      style={{fontSize: 14, marginLeft: 10}}
+                    >
+                      {text}
+                    </Typography>
+                  }
+                />
               </ListItem>
             </Link>
           ))}
         </List>
-        <Grid direction="row" style={{paddingLeft: 2}}>
+        <Grid direction="row" style={{paddingLeft: 2, marginLeft: 10}}>
           <IconButton
             color="default"
             href="https://www.instagram.com/rocky110907"
