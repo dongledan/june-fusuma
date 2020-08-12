@@ -23,7 +23,8 @@ const useStyles = makeStyles(theme => ({
   },
   text: {
     marginLeft: 16,
-    marginBottom: -15
+    marginBottom: -15,
+    letterSpacing: 2
   },
   textField: {
     width: '100ch'
