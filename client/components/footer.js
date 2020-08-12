@@ -11,6 +11,7 @@ import {
   Button
 } from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
+import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -63,6 +64,11 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: 2,
     fontWeight: '100',
     marginBottom: 40
+  },
+  fixed: {
+    position: 'fixed',
+    bottom: 42,
+    right: 40
   }
 }))
 
@@ -109,7 +115,7 @@ export const Footer = () => {
         {new Date().getFullYear()} COCO FUSUMA
       </Typography>
       <List className={classes.list}>
-        {['MY ACCOUNT', 'FAQ', 'PRIVACY', 'ABOUT'].map((text, index) => (
+        {['MY ACCOUNT', 'FAQ', 'ABOUT', 'PRIVACY'].map((text, index) => (
           <Link
             to={`/${text.toLowerCase()}`}
             key={text}
@@ -122,6 +128,17 @@ export const Footer = () => {
             </ListItem>
           </Link>
         ))}
+        <a className={classes.fixed} href="#">
+          <KeyboardArrowUpIcon
+            style={{
+              fontSize: 30,
+              border: 'solid',
+              borderWidth: 2,
+              borderRadius: 100,
+              color: '#888'
+            }}
+          />
+        </a>
       </List>
     </Grid>
   )
