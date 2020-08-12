@@ -196,6 +196,7 @@ function Navbar({handleClick, isLoggedIn}) {
               to={`/${text.toLowerCase()}`}
               key={text}
               style={{color: '#000'}}
+              onClick={handleDrawerClose}
             >
               <ListItem button>
                 <ListItemText
@@ -219,6 +220,7 @@ function Navbar({handleClick, isLoggedIn}) {
               to={`/${text.toLowerCase()}`}
               key={text}
               style={{color: '#000'}}
+              onClick={handleDrawerClose}
             >
               <ListItem button>
                 <ListItemText
@@ -234,6 +236,15 @@ function Navbar({handleClick, isLoggedIn}) {
               </ListItem>
             </Link>
           ))}
+          <ListItem button>
+            <ListItemText
+              primary={
+                <Typography type="body2" style={{fontSize: 14, marginLeft: 10}}>
+                  SIZE CHART
+                </Typography>
+              }
+            />
+          </ListItem>
         </List>
         <Grid direction="row" style={{paddingLeft: 2, marginLeft: 10}}>
           <IconButton

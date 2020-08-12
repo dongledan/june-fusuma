@@ -6,13 +6,36 @@ import history from './history'
 import store from './store'
 import App from './app'
 
+import {createMuiTheme, MuiThemeProvider} from '@material-ui/core/styles'
+
 // establishes socket connection
 import './socket'
+
+const theme = createMuiTheme({
+  typography: {
+    h1: {
+      fontFamily: 'Knewave',
+      color: '#FFF',
+      backgroundColor: '#000'
+    },
+    h2: {
+      fontFamily: 'Emblema One'
+    },
+    h3: {
+      fontFamily: 'Knewave'
+    },
+    h4: {
+      fontFamily: 'Emblema One'
+    }
+  }
+})
 
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <App />
+      <MuiThemeProvider theme={theme}>
+        <App />
+      </MuiThemeProvider>
     </Router>
   </Provider>,
   document.getElementById('app')

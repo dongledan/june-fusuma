@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
+import {Link} from 'react-router-dom'
 
 import {Typography, Grid, CssBaseline, Button} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
@@ -8,29 +9,30 @@ import {Footer} from './footer'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '90vh'
+    height: '100vh'
   },
   image: {
     backgroundImage: 'url(https://i.imgur.com/4c0bIKG.jpg)',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
+    height: '93.5vh'
   },
   title: {
-    backgroundColor: '#000',
-    color: '#fff',
-    padding: 20
-  },
-  paper: {
-    margin: theme.spacing(8, 4),
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center'
+    padding: 20,
+    marginTop: 10,
+    marginBottom: '20vh'
   },
   button: {
     borderRadius: 50,
     backgroundColor: '#000',
-    color: '#fff'
+    fontWeight: '100',
+    color: '#fff',
+    paddingLeft: 17,
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingRight: 17,
+    letterSpacing: 2
   }
 }))
 /**
@@ -45,33 +47,42 @@ export const UserHome = props => {
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={12} className={classes.image}>
-        <Typography align="center" variant="h1" className={classes.title}>
-          JUNFUSUMAデブ
-        </Typography>
         <Grid
           container
           spacing={0}
           direction="column"
-          justify="center"
           alignItems="center"
           style={{height: '78vh'}}
         >
+          <Typography align="center" variant="h1" className={classes.title}>
+            JUNFUSUMA
+          </Typography>
           <Typography variant="h2" style={{color: '#fff', paddingTop: 20}}>
             " I MISS ROCKY "
           </Typography>
+          <Typography variant="h6" style={{color: '#fff', marginTop: -10}}>
+            ────────
+          </Typography>
           <Typography
             variant="h6"
-            style={{color: '#fff', marginTop: -10, paddingBottom: 20}}
+            style={{color: '#fff', marginTop: -10, paddingBottom: 40}}
           >
             2020
           </Typography>
           <Typography
             variant="h5"
-            style={{color: '#b28b5e', paddingBottom: 40}}
+            style={{
+              color: '#b28b5e',
+              paddingBottom: 50,
+              fontSize: 18,
+              letterSpacing: 3
+            }}
           >
             LIMITED SAMPLE RUN
           </Typography>
-          <Button className={classes.button}>SHOP</Button>
+          <Link to="/shop">
+            <Button className={classes.button}>SHOP</Button>
+          </Link>
         </Grid>
       </Grid>
       <Footer />

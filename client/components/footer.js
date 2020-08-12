@@ -82,7 +82,7 @@ export const Footer = () => {
         <Container maxWidth="sm">
           <Grid xs={12}>
             <Typography variant="body2" gutterBottom style={{marginTop: 40}}>
-              ── LETTERS TO THE FUSUMA NEWSLETTER
+              ── JUN FUSUMA POETRY SLAM NEWSLETTER
             </Typography>
             <Typography variant="body2" gutterBottom>
               Sign up to be notified of new product releases and restocks, and

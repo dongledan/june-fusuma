@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 20
   },
   subtitle: {
-    paddingBottom: 15
+    padding: 15
   },
   text: {
     marginTop: 20,
@@ -38,12 +38,12 @@ export const FAQ = () => {
     <Grid container component="main" className={classes.root} justify="center">
       <Grid xs={12}>
         <Typography align="center" variant="h3" className={classes.title}>
-          JUNFUSUMAデブ
+          JUNFUSUMA
         </Typography>
         <Divider />
       </Grid>
       <Grid xs={6}>
-        <Typography align="center" variant="h4" className={classes.subtitle}>
+        <Typography variant="h4" align="center" className={classes.subtitle}>
           FAQ
         </Typography>
         <Accordion defaultExpanded={true}>
