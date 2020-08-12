@@ -1,6 +1,7 @@
 import React from 'react'
 import {Typography, Grid, Divider} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
+import {Footer} from './footer'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -68,6 +69,7 @@ export const About = () => {
           </Typography>
         </Grid>
       </Grid>
+      <Footer />
     </Grid>
   )
 }
