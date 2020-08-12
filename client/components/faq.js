@@ -9,10 +9,11 @@ import {
 } from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
+import {Footer} from './footer'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '90vh'
+    minHeight: '92.5vh'
   },
   heading: {
     fontSize: theme.typography.pxToRem(18),
@@ -41,11 +42,11 @@ export const FAQ = () => {
         </Typography>
         <Divider />
       </Grid>
-      <Grid xs={6} direction="column">
+      <Grid xs={6}>
         <Typography align="center" variant="h4" className={classes.subtitle}>
           FAQ
         </Typography>
-        <Accordion defaultExpanded={true} className={classes.accordion}>
+        <Accordion defaultExpanded={true}>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
             aria-controls="panel1a-content"
@@ -151,6 +152,7 @@ export const FAQ = () => {
           </AccordionSummary>
         </Accordion>
       </Grid>
+      <Footer />
     </Grid>
   )
 }

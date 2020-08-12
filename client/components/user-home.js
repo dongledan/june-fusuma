@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 
 import {Typography, Grid, CssBaseline, Button} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
+import {Footer} from './footer'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -66,13 +67,14 @@ export const UserHome = props => {
           </Typography>
           <Typography
             variant="h5"
-            style={{color: '#DE5D83', paddingBottom: 40}}
+            style={{color: '#b28b5e', paddingBottom: 40}}
           >
             LIMITED SAMPLE RUN
           </Typography>
           <Button className={classes.button}>SHOP</Button>
         </Grid>
       </Grid>
+      <Footer />
     </Grid>
   )
 }

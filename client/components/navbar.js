@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
+import {Copyright} from './copyright'
 
 import {
   AppBar,
@@ -138,19 +139,35 @@ function Navbar({handleClick, isLoggedIn}) {
                 >
                   Logout
                 </a>
-                <Link to="/cart" className={classes.toolbarLink}>
+                <Link
+                  to="/cart"
+                  className={classes.toolbarLink}
+                  style={{color: '#000'}}
+                >
                   <ShoppingCart />
                 </Link>
               </div>
             ) : (
               <div>
-                <Link to="/login" className={classes.toolbarLink}>
+                <Link
+                  to="/login"
+                  className={classes.toolbarLink}
+                  style={{color: '#000'}}
+                >
                   Login
                 </Link>
-                <Link to="/signup" className={classes.toolbarLink}>
+                <Link
+                  to="/signup"
+                  className={classes.toolbarLink}
+                  style={{color: '#000'}}
+                >
                   Sign Up
                 </Link>
-                <Link to="/cart" className={classes.toolbarLink}>
+                <Link
+                  to="/cart"
+                  className={classes.toolbarLink}
+                  style={{color: '#000'}}
+                >
                   <ShoppingCart />
                 </Link>
               </div>
@@ -175,27 +192,54 @@ function Navbar({handleClick, isLoggedIn}) {
         <Divider />
         <List>
           {['HOME', 'SHOP', 'COLLECTIONS', 'ABOUT'].map((text, index) => (
-            <ListItem button key={text}>
-              <Link to={`/${text.toLowerCase()}`}>
-                <ListItemText primary={text} />
-              </Link>
-            </ListItem>
+            <Link
+              to={`/${text.toLowerCase()}`}
+              key={text}
+              style={{color: '#000'}}
+            >
+              <ListItem button>
+                <ListItemText
+                  primary={
+                    <Typography
+                      type="body2"
+                      style={{fontSize: 14, marginLeft: 10}}
+                    >
+                      {text}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            </Link>
           ))}
         </List>
         <Divider />
         <List>
           {['FAQ', 'CONTACT'].map((text, index) => (
-            <ListItem button key={text}>
-              <Link to={`/${text.toLowerCase()}`}>
-                <ListItemText primary={text} />
-              </Link>
-            </ListItem>
+            <Link
+              to={`/${text.toLowerCase()}`}
+              key={text}
+              style={{color: '#000'}}
+            >
+              <ListItem button>
+                <ListItemText
+                  primary={
+                    <Typography
+                      type="body2"
+                      style={{fontSize: 14, marginLeft: 10}}
+                    >
+                      {text}
+                    </Typography>
+                  }
+                />
+              </ListItem>
+            </Link>
           ))}
         </List>
-        <Grid direction="row" style={{paddingLeft: 2}}>
+        <Grid direction="row" style={{paddingLeft: 2, marginLeft: 10}}>
           <IconButton
             color="default"
             href="https://www.instagram.com/rocky110907"
+            target="_blank"
           >
             <InstagramIcon />
           </IconButton>
@@ -205,14 +249,13 @@ function Navbar({handleClick, isLoggedIn}) {
           <IconButton
             color="default"
             href="https://www.youtube.com/channel/UCPQfv6uzy-EOTxJVk3adJIg/videos"
+            target="_blank"
           >
             <YouTubeIcon />
           </IconButton>
         </Grid>
         <Divider />
-        <Typography variant="caption" className={classes.copyright}>
-          ©2020 COCO FUSUMA
-        </Typography>
+        <Copyright />
       </Drawer>
     </div>
   )
