@@ -16,7 +16,8 @@ import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp'
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    marginTop: 40
   },
   main: {
     marginTop: theme.spacing(8),
@@ -92,7 +93,12 @@ export const Footer = () => {
             <TextField
               inputProps={{
                 min: 0,
-                style: {textAlign: 'start', marginLeft: 20, marginRight: 20}
+                style: {
+                  textAlign: 'start',
+                  marginLeft: 20,
+                  marginRight: 20,
+                  fontSize: 14
+                }
               }}
               placeholder="YOUR EMAIL ADDRESS"
               id="outlined-basic"

@@ -43,7 +43,7 @@ export const About = () => {
           spacing={0}
           direction="column"
           alignItems="center"
-          style={{height: '78vh'}}
+          style={{height: '84vh'}}
         >
           <Typography variant="h5" className={classes.subtitle}>
             ABOUT OUR BRAND
