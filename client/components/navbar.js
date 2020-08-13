@@ -138,13 +138,12 @@ function Navbar({handleClick, isLoggedIn}) {
                     handleClick()
                     handleDrawerClose()
                   }}
-                  className={classes.toolbarLink}
+                  style={{color: '#000'}}
                 >
                   LOGOUT
                 </a>
                 <Link
                   to="/cart"
-                  className={classes.toolbarLink}
                   style={{color: '#000'}}
                   onClick={handleDrawerClose}
                 >
@@ -155,7 +154,6 @@ function Navbar({handleClick, isLoggedIn}) {
               <div>
                 <Link
                   to="/login"
-                  className={classes.toolbarLink}
                   style={{color: '#000'}}
                   onClick={handleDrawerClose}
                 >

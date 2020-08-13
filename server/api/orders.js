@@ -12,16 +12,17 @@ router.get('/', isAdmin, async (req, res, next) => {
   }
 })
 
-router.get('/:userId', isCorrectUser, async (req, res, next) => {
+router.get('/:userId', isAdmin, async (req, res, next) => {
   try {
     const userOrders = await Order.findPurchaseHistory(req.params.userId)
+    console.log(userOrders)
     res.json(userOrders)
   } catch (err) {
     next(err)
   }
 })
 
-router.get('/:userId/cart', isCorrectUser, async (req, res, next) => {
+router.get('/:userId/cart', isAdmin, async (req, res, next) => {
   try {
     const cart = await Order.findCart(req.params.userId)
     res.json(cart)

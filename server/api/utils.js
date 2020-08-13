@@ -19,8 +19,6 @@ function isCorrectUser(req, res, next) {
       'Hey! You are not this user. What are you even doing back here? Please find your way to the front end :)'
     )
   }
-  console.log('req.user', req.user.id)
-  console.log('params', id)
 }
 
 function isCorrectUserOrAdmin(req, res, next) {

@@ -50,6 +50,7 @@
     "express-session": "^1.15.1",
     "fireworks": "^2.2.6",
     "history": "^4.9.0",
+    "material-table": "^1.68.0",
     "morgan": "^1.9.1",
     "passport": "^0.4.0",
     "passport-google-oauth": "^2.0.0",
