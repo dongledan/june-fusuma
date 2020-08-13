@@ -15,28 +15,14 @@ const useStyles = makeStyles(theme => ({
     width: '40vw',
     minHeight: '40vh'
   },
-  image2: {
-    backgroundImage: 'url(https://i.imgur.com/gqnyUuQ.jpg)',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    width: '40vw',
-    minHeight: '70vh'
-  },
-  image4: {
-    backgroundImage: 'url(https://i.imgur.com/mrhsqCE.png)',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    height: '24vh'
-  },
   imageSize: {
     height: 200,
     width: 200
   },
-  image3: {
-    backgroundImage: 'url(https://i.imgur.com/1NZUYZG.png)',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    height: '40vh'
+  jun: {
+    height: 400,
+    width: 400,
+    padding: 20
   },
   subtitle: {
     paddingTop: 30,
@@ -45,20 +31,25 @@ const useStyles = makeStyles(theme => ({
   text: {
     marginTop: 20,
     width: '50%'
+  },
+  textWidth: {
+    width: '60%'
   }
 }))
 
 export const About = () => {
   const classes = useStyles()
   const clothes = [
-    'FENDI Square Acetate Sunglasses - $385',
-    'OFF-WHITE Camouflage Padded Field Jacket - $1,940',
-    'RRL Straight Leg Jeans (Eubanks) - $420',
-    'TIMBERLAND Classic Chukka Boots - $135'
+    'FENDI SQUARE ACETATE SUNGLASSES - $385',
+    'OFF-WHITE CAMOUFLAGE PADDED FIELD JACKET - $1,940',
+    'SAINT LAURENT YSL POCKET TEE - $169',
+    'RRL STRAIGHT LEG JEANS (EUBANKS) - $420',
+    'TIMBERLAND CLASSIC CHUKKA BOOTS - $135'
   ]
   const imgs = [
     'https://i.imgur.com/1NZUYZG.png',
     'https://i.imgur.com/mrhsqCE.png',
+    'https://i.ibb.co/mDYFHNs/Screen-Shot-2020-08-12-at-22-09-18.png',
     'https://i.imgur.com/fFzlKIq.png',
     'https://i.imgur.com/9aihmr6.png'
   ]
@@ -95,53 +86,32 @@ export const About = () => {
           </Typography>
         </Grid>
       </Grid>
+      <Grid container justify="center">
+        <img
+          src="https://i.ibb.co/mqJ8c1d/IMG-2110.jpg"
+          className={classes.jun}
+        />
+      </Grid>
       <Grid container xs={12} direction="row" justify="center">
-        <Grid
-          container
-          xs={4}
-          direction="column"
-          justify="center"
-          alignItems="center"
-        >
-          <img
-            src="https://i.imgur.com/1NZUYZG.png"
-            className={classes.imageSize}
-          />
-          <Typography variant="caption" className={classes.textWidth}>
-            FENDI Square Acetate Sunglasses - $385
-          </Typography>
-        </Grid>
-        <Grid container xs={4} direction="row">
-          <img
-            src="https://i.imgur.com/mrhsqCE.png"
-            className={classes.imageSize}
-          />
-          <Typography variant="caption">
-            OFF-WHITE Camouflage Padded Field Jacket - $1,940
-          </Typography>
-        </Grid>
-        <Grid container xs={4} direction="row">
-          <img
-            src="https://i.imgur.com/fFzlKIq.png"
-            className={classes.imageSize}
-          />
-          <Grid>
-            <Typography variant="caption">
-              RRL Straight Leg Jeans (Eubanks) - $420{' '}
+        {clothes.map((item, i) => (
+          <Grid
+            container
+            xs={4}
+            direction="column"
+            justify="center"
+            alignItems="center"
+            key={item}
+          >
+            <img src={imgs[i]} className={classes.imageSize} />
+            <Typography
+              variant="caption"
+              align="center"
+              className={classes.textWidth}
+            >
+              {item}
             </Typography>
           </Grid>
-        </Grid>
-        <Grid container xs={4} direction="row">
-          <img
-            src="https://i.imgur.com/9aihmr6.png"
-            className={classes.imageSize}
-          />
-          <Grid>
-            <Typography variant="caption">
-              Timberland Classic Chukka Boots - $135{' '}
-            </Typography>
-          </Grid>
-        </Grid>
+        ))}
       </Grid>
 
       <Footer />
