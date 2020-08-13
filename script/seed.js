@@ -1,18 +1,121 @@
 'use strict'
 
 const db = require('../server/db')
-const {User} = require('../server/db/models')
+const {User, Item, Order, OrderItem} = require('../server/db/models')
+
+const users = [
+  {email: 'cody@email.com', password: '123', isAdmin: true},
+  {email: 'murphy@email.com', password: '123'}
+]
+
+const items = [
+  {
+    season: '2020',
+    name: 'LITTLE PRODIGY',
+    imageUrl: 'https://i.ibb.co/9gWpRgH/ljb.png',
+    price: '50.00',
+    quantity: 5,
+    description:
+      'It takes 10,000 hours to become an expert. Have you been putting in the work? Chances are, some little asian boy is already better than you.'
+  },
+  {
+    season: '2020',
+    name: 'BOB ROSS PAINTS JUN',
+    imageUrl: 'https://i.ibb.co/9gWpRgH/ljb.png',
+    price: '25.00',
+    quantity: 5,
+    description:
+      'This was all a mistake but at least it is a happy mistake. A tree here, and tree there and we got ourselves a painting.'
+  },
+  {
+    season: '2019',
+    name: 'GREEN IS THE NEW BLACK BELT',
+    imageUrl: 'https://i.ibb.co/rymzcM1/Screen-Shot-2020-08-12-at-23-49-37.png',
+    price: '30.00',
+    quantity: 1,
+    description:
+      'Brown belt? No thanks. I am not ready. Let me dwell among the green belts. Ow my shoulder! Not again.'
+  },
+  {
+    season: '2018',
+    name: 'WHITE T-SHIRT',
+    imageUrl: 'https://i.ibb.co/mDYFHNs/Screen-Shot-2020-08-12-at-22-09-18.png',
+    price: '25.00',
+    quantity: 5,
+    description:
+      'This is so much more than a shirt. It is a white t-shirt. What do you want, it is a t-shirt.'
+  },
+  {
+    season: '2018',
+    name: `"YOU GOOD BRO?"`,
+    imageUrl: 'https://i.imgur.com/X4WJfTy.png',
+    price: '35.00',
+    quantity: 5,
+    description: `Tell me... Tell me that I can outdrink you. The narrator: "He could not."`
+  }
+]
+
+const orders = [
+  {
+    isPurchased: true,
+    userId: 1
+  },
+  {
+    isPurchased: false,
+    userId: 1
+  },
+  {
+    isPurchased: true,
+    userId: 2
+  },
+  {
+    isPurchased: false,
+    userId: 2
+  }
+]
+
+const orderItems = [
+  {
+    orderId: 1,
+    itemId: 1,
+    price: '10',
+    quantity: 1
+  },
+  {
+    orderId: 2,
+    itemId: 1,
+    price: '10',
+    quantity: 1
+  },
+  {
+    orderId: 3,
+    itemId: 1,
+    price: '10',
+    quantity: 1
+  },
+  {
+    orderId: 4,
+    itemId: 1,
+    price: '10',
+    quantity: 1
+  }
+]
 
 async function seed() {
   await db.sync({force: true})
   console.log('db synced!')
 
-  const users = await Promise.all([
-    User.create({email: 'cody@email.com', password: '123'}),
-    User.create({email: 'murphy@email.com', password: '123'})
-  ])
-
+  await Promise.all(users.map(user => User.create(user)))
   console.log(`seeded ${users.length} users`)
+
+  await Promise.all(items.map(item => Item.create(item)))
+  console.log(`seeded ${items.length} items`)
+
+  await Promise.all(orders.map(order => Order.create(order)))
+  console.log(`seeded ${orders.length} orders`)
+
+  await Promise.all(orderItems.map(orderItem => OrderItem.create(orderItem)))
+  console.log(`seeded ${orderItems.length} orderItems`)
   console.log(`seeded successfully`)
 }
 

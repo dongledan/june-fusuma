@@ -134,15 +134,18 @@ function Navbar({handleClick, isLoggedIn}) {
               <div>
                 <a
                   href="#"
-                  onClick={handleClick}
-                  className={classes.toolbarLink}
+                  onClick={() => {
+                    handleClick()
+                    handleDrawerClose()
+                  }}
+                  style={{color: '#000'}}
                 >
-                  Logout
+                  LOGOUT
                 </a>
                 <Link
                   to="/cart"
-                  className={classes.toolbarLink}
                   style={{color: '#000'}}
+                  onClick={handleDrawerClose}
                 >
                   <ShoppingCart />
                 </Link>
@@ -151,8 +154,8 @@ function Navbar({handleClick, isLoggedIn}) {
               <div>
                 <Link
                   to="/login"
-                  className={classes.toolbarLink}
                   style={{color: '#000'}}
+                  onClick={handleDrawerClose}
                 >
                   LOGIN
                 </Link>
@@ -160,6 +163,7 @@ function Navbar({handleClick, isLoggedIn}) {
                   to="/signup"
                   className={classes.toolbarLink}
                   style={{color: '#000'}}
+                  onClick={handleDrawerClose}
                 >
                   SIGN UP
                 </Link>
@@ -167,6 +171,7 @@ function Navbar({handleClick, isLoggedIn}) {
                   to="/cart"
                   className={classes.toolbarLink}
                   style={{color: '#000'}}
+                  onClick={handleDrawerClose}
                 >
                   <ShoppingCart />
                 </Link>

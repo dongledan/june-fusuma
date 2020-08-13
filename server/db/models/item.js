@@ -2,12 +2,12 @@ const Sequelize = require('sequelize')
 const db = require('../db')
 
 const Item = db.define('item', {
-  collections: {
+  season: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {
       notEmpty: true,
-      isIn: [['2019', '2020']]
+      isIn: [['2018', '2019', '2020']]
     }
   },
   name: {

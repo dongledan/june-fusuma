@@ -177,7 +177,10 @@ const AuthForm = props => {
               }}
             />
             {error && error.response ? (
-              <div className={classes.error}> {error.response.data} </div>
+              <div className={classes.error}>
+                {' '}
+                Please enter valid EMAIL and/or PASSWORD.{' '}
+              </div>
             ) : (
               <div className={classes.line}>────</div>
             )}

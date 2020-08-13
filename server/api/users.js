@@ -1,17 +1,17 @@
 const router = require('express').Router()
 const {User, Order} = require('../db/models')
 const {
-  isUser,
+  isCorrectUser,
   isAdmin,
   isCorrectUserOrAdmin,
   doesCartExist
 } = require('./utils')
 module.exports = router
 
-router.get('/', async (req, res, next) => {
+router.get('/', isAdmin, async (req, res, next) => {
   try {
     const users = await User.findAll({
-      attributes: ['id', 'email', 'imageUrl']
+      attributes: ['id', 'email']
     })
     res.json(users)
   } catch (err) {
@@ -19,7 +19,7 @@ router.get('/', async (req, res, next) => {
   }
 })
 
-router.get('/:id', isUser, async (req, res, next) => {
+router.get('/:id', isCorrectUser, async (req, res, next) => {
   try {
     const user = await User.findByPk(req.params.id)
     res.json(user)
