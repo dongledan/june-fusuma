@@ -13,19 +13,45 @@ const items = [
     season: '2020',
     name: 'LITTLE PRODIGY',
     imageUrl: 'https://i.ibb.co/9gWpRgH/ljb.png',
-    price: '49.99',
+    price: '50.00',
     quantity: 5,
     description:
       'It takes 10,000 hours to become an expert. Have you been putting in the work? Chances are, some little asian boy is already better than you.'
   },
   {
+    season: '2020',
+    name: 'BOB ROSS PAINTS JUN',
+    imageUrl: 'https://i.ibb.co/9gWpRgH/ljb.png',
+    price: '25.00',
+    quantity: 5,
+    description:
+      'This was all a mistake but at least it is a happy mistake. A tree here, and tree there and we got ourselves a painting.'
+  },
+  {
     season: '2019',
     name: 'GREEN IS THE NEW BLACK BELT',
     imageUrl: 'https://i.ibb.co/rymzcM1/Screen-Shot-2020-08-12-at-23-49-37.png',
-    price: '29.99',
+    price: '30.00',
     quantity: 1,
     description:
       'Brown belt? No thanks. I am not ready. Let me dwell among the green belts. Ow my shoulder! Not again.'
+  },
+  {
+    season: '2018',
+    name: 'WHITE T-SHIRT',
+    imageUrl: 'https://i.ibb.co/mDYFHNs/Screen-Shot-2020-08-12-at-22-09-18.png',
+    price: '25.00',
+    quantity: 5,
+    description:
+      'This is so much more than a shirt. It is a white t-shirt. What do you want, it is a t-shirt.'
+  },
+  {
+    season: '2018',
+    name: `"YOU GOOD BRO?"`,
+    imageUrl: 'https://i.imgur.com/X4WJfTy.png',
+    price: '35.00',
+    quantity: 5,
+    description: `Tell me... Tell me that I can outdrink you. The narrator: "He could not."`
   }
 ]
 

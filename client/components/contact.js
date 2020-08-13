@@ -43,8 +43,8 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 5,
     paddingRight: 17,
     letterSpacing: 2,
-    marginLeft: 16,
-    marginTop: 40
+    marginLeft: 32,
+    marginTop: 20
   },
   subtitle2: {
     fontWeight: '100',
@@ -84,7 +84,7 @@ export const Contact = () => {
         </Grid>
       </form>
       <form className={classes.form2} noValidate autoComplete="off">
-        <Grid xs={12} container className={classes.grid}>
+        <Grid xs={12} container className={classes.grid} direction="column">
           <Typography variant="caption" className={classes.text}>
             YOUR MESSAGE
           </Typography>
@@ -95,9 +95,10 @@ export const Contact = () => {
             rows={8}
             variant="outlined"
           />
-          <Button className={classes.button}>SEND</Button>
         </Grid>
       </form>
+      <Button className={classes.button}>SEND</Button>
+
       <Footer />
     </div>
   )

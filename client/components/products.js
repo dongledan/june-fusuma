@@ -20,11 +20,11 @@ class Products extends Component {
         <Typography variant="h4" align="center" style={{padding: 15}}>
           SHOP
         </Typography>
-        <Grid container xs={12} style={{padding: 24}} justify="center">
+        <Grid container xs={12} justify="justify">
           {Array.isArray(this.props.products) &&
-            this.props.products.map(product => (
-              <Grid item xs={3} style={{padding: 5}}>
-                <Product key={product.id} product={product} />
+            this.props.products.map((product, i) => (
+              <Grid xs={4} key={product.id}>
+                <Product product={product} />
               </Grid>
             ))}
         </Grid>
