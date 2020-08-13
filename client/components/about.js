@@ -19,13 +19,24 @@ const useStyles = makeStyles(theme => ({
     backgroundImage: 'url(https://i.imgur.com/gqnyUuQ.jpg)',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    width: '20vw',
-    minHeight: '40vh'
+    width: '40vw',
+    minHeight: '70vh'
+  },
+  image4: {
+    backgroundImage: 'url(https://i.imgur.com/mrhsqCE.png)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    height: '24vh'
+  },
+  imageSize: {
+    height: 200,
+    width: 200
   },
   image3: {
-    backgroundImage: 'url(https://i.imgur.com/gqnyUuQ.jpg)',
+    backgroundImage: 'url(https://i.imgur.com/1NZUYZG.png)',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    height: '40vh'
   },
   subtitle: {
     paddingTop: 30,
@@ -34,15 +45,23 @@ const useStyles = makeStyles(theme => ({
   text: {
     marginTop: 20,
     width: '50%'
-  },
-  stealThatLook: {
-    paddingLeft: '10%',
-    paddingRight: '10%'
   }
 }))
 
 export const About = () => {
   const classes = useStyles()
+  const clothes = [
+    'FENDI Square Acetate Sunglasses - $385',
+    'OFF-WHITE Camouflage Padded Field Jacket - $1,940',
+    'RRL Straight Leg Jeans (Eubanks) - $420',
+    'TIMBERLAND Classic Chukka Boots - $135'
+  ]
+  const imgs = [
+    'https://i.imgur.com/1NZUYZG.png',
+    'https://i.imgur.com/mrhsqCE.png',
+    'https://i.imgur.com/fFzlKIq.png',
+    'https://i.imgur.com/9aihmr6.png'
+  ]
 
   return (
     <Grid container component="main" className={classes.root}>
@@ -74,24 +93,57 @@ export const About = () => {
           <Typography variant="h4" className={classes.subtitle}>
             STEAL JUN'S LOOK
           </Typography>
-          <Grid container direction="row" className={classes.stealThatLook}>
-            <Grid xs={4} className={classes.image2} />
-            <Grid container xs={8} direction="column">
-              <Grid container xs={6} direction="row">
-                <Grid xs={3} className={classes.image3} />
-
-                <Grid xs={3}>
-                  <Typography variant="caption">
-                    Fendi Square Acetate Sunglasses - $385
-                  </Typography>
-                </Grid>
-              </Grid>
-
-              <Typography>hello</Typography>
-            </Grid>
+        </Grid>
+      </Grid>
+      <Grid container xs={12} direction="row" justify="center">
+        <Grid
+          container
+          xs={4}
+          direction="column"
+          justify="center"
+          alignItems="center"
+        >
+          <img
+            src="https://i.imgur.com/1NZUYZG.png"
+            className={classes.imageSize}
+          />
+          <Typography variant="caption" className={classes.textWidth}>
+            FENDI Square Acetate Sunglasses - $385
+          </Typography>
+        </Grid>
+        <Grid container xs={4} direction="row">
+          <img
+            src="https://i.imgur.com/mrhsqCE.png"
+            className={classes.imageSize}
+          />
+          <Typography variant="caption">
+            OFF-WHITE Camouflage Padded Field Jacket - $1,940
+          </Typography>
+        </Grid>
+        <Grid container xs={4} direction="row">
+          <img
+            src="https://i.imgur.com/fFzlKIq.png"
+            className={classes.imageSize}
+          />
+          <Grid>
+            <Typography variant="caption">
+              RRL Straight Leg Jeans (Eubanks) - $420{' '}
+            </Typography>
+          </Grid>
+        </Grid>
+        <Grid container xs={4} direction="row">
+          <img
+            src="https://i.imgur.com/9aihmr6.png"
+            className={classes.imageSize}
+          />
+          <Grid>
+            <Typography variant="caption">
+              Timberland Classic Chukka Boots - $135{' '}
+            </Typography>
           </Grid>
         </Grid>
       </Grid>
+
       <Footer />
     </Grid>
   )
