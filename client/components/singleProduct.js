@@ -35,7 +35,7 @@ class SingleProduct extends React.Component {
       backgroundColor: '#000',
       color: '#fff',
       className: 'info',
-      gravity: 'top',
+      gravity: 'bottom',
       position: 'right'
     }).showToast()
 
