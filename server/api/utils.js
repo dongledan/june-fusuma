@@ -4,7 +4,9 @@ function isAdmin(req, res, next) {
   if (req.user && req.user.isAdmin) {
     next()
   } else {
-    res.send('Nice try non admin weirdo')
+    res.send(
+      'Hey! Nice try non admin weirdo. Please make your way back to the front end :)'
+    )
   }
 }
 
@@ -33,7 +35,6 @@ function isCorrectUserOrAdmin(req, res, next) {
 }
 
 async function doesCartExist(req, res, next) {
-  //confirm this is correct logic!
   if (!Order.findCart(req.user.id)) {
     next()
   }

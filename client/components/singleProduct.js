@@ -58,7 +58,13 @@ class SingleProduct extends React.Component {
     return (
       <div align="center">
         <Header />
-        <Grid container xs={12} direction="row" justify="center">
+        <Grid
+          container
+          xs={12}
+          direction="row"
+          justify="center"
+          style={{marginTop: 40}}
+        >
           <Card style={{width: '40%'}}>
             <Grid container justify="flex-end">
               <CardMedia
@@ -68,45 +74,70 @@ class SingleProduct extends React.Component {
               />
             </Grid>
           </Card>
-          <Card style={{width: '40%'}}>
+          <Card style={{width: '40%', padding: '5%'}}>
             <CardActionArea>
               <CardContent>
-                <Typography gutterBottom variant="h4" style={{fontSize: 30}}>
+                <Typography
+                  gutterBottom
+                  align="left"
+                  variant="h4"
+                  style={{fontSize: 30}}
+                >
                   {product && product.name}
                 </Typography>
                 <Typography
                   gutterBottom
-                  component="p"
                   align="left"
                   style={{
                     color: '#888',
-                    marginLeft: 12,
                     marginTop: -10,
                     marginBottom: 30
                   }}
                 >
                   $ {product && product.price}
                 </Typography>
-                <Typography>
-                  {product.season === '2020' ? `"I MISS ROCKY."` : ''}
+                <Typography
+                  variant="h6"
+                  align="left"
+                  gutterBottom
+                  style={{marginBottom: 30}}
+                >
+                  {product.season === '2020' ? `I MISS ROCKY` : ''}
                 </Typography>
                 {product.season !== '2020' && (
-                  <Typography>
+                  <Typography
+                    variant="h6"
+                    align="left"
+                    gutterBottom
+                    style={{marginBottom: 30}}
+                  >
                     {product.season === '2019'
-                      ? `"OW. MY SHOULDER."`
-                      : 'TALL IN THE CAR.'}
+                      ? `OW. MY SHOULDER`
+                      : `TALL IN THE CAR`}
                   </Typography>
                 )}
-                <Typography gutterBottom component="p" align="left">
+                <Typography gutterBottom variant="body2" align="left">
                   {product && product.description}
                 </Typography>
 
                 <Button
-                  variant="contained"
+                  align="left"
                   onClick={this.onClick}
-                  color="primary"
+                  style={{
+                    borderRadius: 50,
+                    backgroundColor: '#000',
+                    fontWeight: '100',
+                    color: '#fff',
+                    paddingLeft: 17,
+                    paddingTop: 5,
+                    paddingBottom: 5,
+                    paddingRight: 17,
+                    letterSpacing: 2,
+                    marginTop: 30,
+                    width: '19ch'
+                  }}
                 >
-                  BUY NOW!
+                  ADD TO CART
                 </Button>
               </CardContent>
             </CardActionArea>
