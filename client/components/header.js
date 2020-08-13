@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 import {Typography, Divider} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 
@@ -13,10 +14,13 @@ export const Header = () => {
   const classes = useStyles()
   return (
     <div>
-      <Typography align="center" variant="h3" className={classes.title}>
-        JUNFUSUMA
-      </Typography>
-      <Divider />
+      <Link to="/home" style={{color: '#000'}}>
+        <Typography align="center" variant="h3" className={classes.title}>
+          JUNFUSUMA
+        </Typography>
+
+        <Divider />
+      </Link>
     </div>
   )
 }

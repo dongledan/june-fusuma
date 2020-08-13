@@ -23,7 +23,7 @@ const showProduct = product => ({type: SHOW_PRODUCT, product})
  */
 export const getProductsThunk = () => async dispatch => {
   try {
-    const {data} = await axios.get('/api/item')
+    const {data} = await axios.get('/api/items')
     dispatch(getProducts(data))
   } catch (err) {
     console.error(err)
@@ -31,7 +31,7 @@ export const getProductsThunk = () => async dispatch => {
 }
 export const showProductThunk = id => async dispatch => {
   try {
-    const {data} = await axios.get(`/api/item/${id}`)
+    const {data} = await axios.get(`/api/items/${id}`)
     dispatch(showProduct(data))
   } catch (error) {
     console.error(error)

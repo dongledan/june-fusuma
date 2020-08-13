@@ -10,6 +10,7 @@ import {
 import {makeStyles} from '@material-ui/core/styles'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
 import {Footer} from './footer'
+import {Header} from './header'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -18,10 +19,6 @@ const useStyles = makeStyles(theme => ({
   heading: {
     fontSize: theme.typography.pxToRem(18),
     fontWeight: theme.typography.fontWeightBold
-  },
-  title: {
-    paddingTop: 10,
-    paddingBottom: 20
   },
   subtitle: {
     padding: 15
@@ -37,10 +34,7 @@ export const FAQ = () => {
   return (
     <Grid container component="main" className={classes.root} justify="center">
       <Grid xs={12}>
-        <Typography align="center" variant="h3" className={classes.title}>
-          JUNFUSUMA
-        </Typography>
-        <Divider />
+        <Header />
       </Grid>
       <Grid xs={6}>
         <Typography variant="h4" align="center" className={classes.subtitle}>

@@ -137,7 +137,7 @@ function Navbar({handleClick, isLoggedIn}) {
                   onClick={handleClick}
                   className={classes.toolbarLink}
                 >
-                  Logout
+                  LOGOUT
                 </a>
                 <Link
                   to="/cart"

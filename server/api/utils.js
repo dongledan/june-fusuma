@@ -8,20 +8,6 @@ function isAdmin(req, res, next) {
   }
 }
 
-async function isUser(req, res, next) {
-  const request = req.body
-  try {
-    const user = await User.findbyPk(request.user.id)
-    console.log(req.body)
-    if (user) {
-      next()
-    }
-    res.send('not a User')
-  } catch (error) {
-    next(error)
-  }
-}
-
 function isCorrectUser(req, res, next) {
   let id = parseInt(req.params.id)
   if (req.user && req.user.id === id) {
@@ -58,6 +44,5 @@ module.exports = {
   isAdmin,
   isCorrectUser,
   doesCartExist,
-  isUser,
   isCorrectUserOrAdmin
 }

@@ -9,7 +9,8 @@ import {
   About,
   FAQ,
   Privacy,
-  Contact
+  Contact,
+  Products
 } from './components'
 import {me} from './store'
 
@@ -35,6 +36,7 @@ class Routes extends Component {
         <Route path="/faq" component={FAQ} />
         <Route path="/privacy" component={Privacy} />
         <Route path="/contact" component={Contact} />
+        <Route path="/shop" component={Products} />
         {isLoggedIn && (
           <Switch>
             {/* Routes placed here are only available after logging in */}

@@ -54,12 +54,18 @@ export const UserHome = props => {
           alignItems="center"
           style={{height: '78vh'}}
         >
-          <Typography align="center" variant="h1" className={classes.title}>
-            JUNFUSUMA
-          </Typography>
-          <Typography variant="h2" style={{color: '#fff', paddingTop: 20}}>
-            " I MISS ROCKY "
-          </Typography>
+          <Link to="/home">
+            <Typography align="center" variant="h1" className={classes.title}>
+              JUNFUSUMA
+            </Typography>
+          </Link>
+
+          <Link to="/shop">
+            <Typography variant="h2" style={{color: '#fff', paddingTop: 20}}>
+              " I MISS ROCKY "
+            </Typography>
+          </Link>
+
           <Typography variant="h6" style={{color: '#fff', marginTop: -10}}>
             ────────
           </Typography>

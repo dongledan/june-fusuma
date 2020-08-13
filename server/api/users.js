@@ -1,7 +1,6 @@
 const router = require('express').Router()
 const {User, Order} = require('../db/models')
 const {
-  isUser,
   isCorrectUser,
   isAdmin,
   isCorrectUserOrAdmin,
