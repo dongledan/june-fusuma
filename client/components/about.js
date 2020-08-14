@@ -34,6 +34,11 @@ const useStyles = makeStyles(theme => ({
   },
   textWidth: {
     width: '60%'
+  },
+  style: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center'
   }
 }))
 
@@ -56,7 +61,7 @@ export const About = () => {
 
   return (
     <Grid container component="main" className={classes.root}>
-      <Grid item xs={12}>
+      <Grid>
         <Header />
         <Grid container spacing={0} direction="column" alignItems="center">
           <Typography variant="h4" className={classes.subtitle}>
@@ -92,16 +97,9 @@ export const About = () => {
           className={classes.jun}
         />
       </Grid>
-      <Grid container xs={12} direction="row" justify="center">
+      <Grid container direction="row" justify="center">
         {clothes.map((item, i) => (
-          <Grid
-            container
-            xs={4}
-            direction="column"
-            justify="center"
-            alignItems="center"
-            key={item}
-          >
+          <div className={classes.style}>
             <img src={imgs[i]} className={classes.imageSize} />
             <Typography
               variant="caption"
@@ -110,7 +108,7 @@ export const About = () => {
             >
               {item}
             </Typography>
-          </Grid>
+          </div>
         ))}
       </Grid>
 

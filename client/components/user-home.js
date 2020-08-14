@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
   title: {
     padding: 20,
     marginTop: 10,
-    marginBottom: '20vh'
+    marginBottom: '20%'
   },
   button: {
     borderRadius: 50,
@@ -52,16 +52,20 @@ export const UserHome = props => {
           spacing={0}
           direction="column"
           alignItems="center"
-          style={{height: '78vh'}}
+          justify="center"
         >
           <Link to="/home">
             <Typography align="center" variant="h1" className={classes.title}>
-              JUNFUSUMA
+              JUN FUSUMA
             </Typography>
           </Link>
 
           <Link to="/shop">
-            <Typography variant="h2" style={{color: '#fff', paddingTop: 20}}>
+            <Typography
+              variant="h2"
+              align="center"
+              style={{color: '#fff', paddingTop: 20}}
+            >
               " I MISS ROCKY "
             </Typography>
           </Link>

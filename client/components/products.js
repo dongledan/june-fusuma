@@ -15,17 +15,15 @@ class Products extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{width: '100%'}}>
         <Header />
         <Typography variant="h4" align="center" style={{padding: 15}}>
           SHOP
         </Typography>
-        <Grid container xs={12} justify="justify">
+        <Grid container xs={12} direction="row" justify="center">
           {Array.isArray(this.props.products) &&
             this.props.products.map((product, i) => (
-              <Grid xs={4} key={product.id}>
-                <Product product={product} />
-              </Grid>
+              <Product product={product} key={product.id} />
             ))}
         </Grid>
         <Footer />
