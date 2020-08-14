@@ -6,7 +6,6 @@ import {
   Grid,
   Card,
   CardContent,
-  CardMedia,
   Button,
   Typography,
   CardActionArea
@@ -60,13 +59,12 @@ class SingleProduct extends React.Component {
         <Header />
         <Grid
           container
-          xs={12}
           flexDirection="row-wrap"
           justify="center"
-          alignItems="center"
+          alignItems="stretch"
           style={{marginTop: 40}}
         >
-          <Card style={{width: 400}}>
+          <Card style={{width: 450, height: 'auto'}}>
             <Grid container>
               <img
                 style={{height: '100%', width: '100%'}}
@@ -75,9 +73,9 @@ class SingleProduct extends React.Component {
               />
             </Grid>
           </Card>
-          <Card>
-            <CardActionArea style={{width: 400, height: 400}}>
-              <Grid container style={{width: '100%'}}>
+          <Card style={{marginLeft: -12}}>
+            <CardActionArea style={{width: 400, height: '100%'}}>
+              <Grid container style={{margin: 10, width: '90%'}}>
                 <CardContent>
                   <Typography
                     gutterBottom
@@ -121,26 +119,43 @@ class SingleProduct extends React.Component {
                   <Typography gutterBottom variant="body2" align="left">
                     {product && product.description}
                   </Typography>
-
-                  <Button
-                    align="left"
-                    onClick={this.onClick}
-                    style={{
-                      borderRadius: 50,
-                      backgroundColor: '#000',
-                      fontWeight: '100',
-                      color: '#fff',
-                      paddingLeft: 17,
-                      paddingTop: 5,
-                      paddingBottom: 5,
-                      paddingRight: 17,
-                      letterSpacing: 2,
-                      marginTop: 30,
-                      width: '15ch'
-                    }}
-                  >
-                    ADD TO CART
-                  </Button>
+                  {product.id === 21 ? (
+                    <Typography
+                      style={{
+                        paddingLeft: 17,
+                        paddingTop: 5,
+                        paddingBottom: 5,
+                        paddingRight: 17,
+                        letterSpacing: 2,
+                        marginTop: 30,
+                        fontSize: 20,
+                        backgroundColor: 'red',
+                        color: '#fff'
+                      }}
+                    >
+                      SOLD OUT
+                    </Typography>
+                  ) : (
+                    <Button
+                      align="left"
+                      onClick={this.onClick}
+                      style={{
+                        borderRadius: 50,
+                        backgroundColor: '#000',
+                        fontWeight: '100',
+                        color: '#fff',
+                        paddingLeft: 17,
+                        paddingTop: 5,
+                        paddingBottom: 5,
+                        paddingRight: 17,
+                        letterSpacing: 2,
+                        marginTop: 30,
+                        width: '15ch'
+                      }}
+                    >
+                      ADD TO CART
+                    </Button>
+                  )}
                 </CardContent>
               </Grid>
             </CardActionArea>

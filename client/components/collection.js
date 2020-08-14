@@ -1,16 +1,16 @@
 import React, {Component} from 'react'
 import {connect} from 'react-redux'
 
-import {getProductsThunk} from '../store/productList'
+import {showSeasonThunk} from '../store/productList'
 import {Product} from './product'
 import {Grid, Typography} from '@material-ui/core'
 
 import {Header} from './header'
 import {Footer} from './footer'
 
-class Products extends Component {
+class Collection extends Component {
   componentDidMount() {
-    this.props.getProducts()
+    this.props.showSeason(this.props.match.params.season)
   }
 
   render() {
@@ -49,8 +49,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    getProducts: () => dispatch(getProductsThunk())
+    showSeason: season => dispatch(showSeasonThunk(season))
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Products)
+export default connect(mapStateToProps, mapDispatchToProps)(Collection)

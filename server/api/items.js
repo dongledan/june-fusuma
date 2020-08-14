@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const {Item} = require('../db/models')
 const {isAdmin} = require('./utils')
+const {stringify} = require('git-url-parse')
 module.exports = router
 
 router.get('/', async (req, res, next) => {
@@ -30,6 +31,21 @@ router.get('/:id', async (req, res, next) => {
     next(error)
   }
 })
+
+router.get('/collections/:season', async (req, res, next) => {
+  try {
+    const season = req.params.season
+    const items = await Item.findAll({
+      where: {
+        season
+      }
+    })
+    res.json(items)
+  } catch (error) {
+    next(error)
+  }
+})
+
 router.post('/', isAdmin, async (req, res, next) => {
   const request = req.body
   try {
