@@ -25,7 +25,6 @@ const useStyles = makeStyles(theme => ({
   textCaption: {
     color: '#fefefe',
     paddingLeft: 20,
-    paddingRight: 30,
     paddingBottom: 10,
     letterSpacing: 1,
     fontWeight: '400'
@@ -117,11 +116,7 @@ const AuthForm = props => {
               alignItems="flex-end"
               className={classes.image}
             >
-              <Typography
-                variant="subtitle2"
-                align="center"
-                className={classes.textCaption}
-              >
+              <Typography variant="subtitle2" className={classes.textCaption}>
                 Deep in thought...見ぬが花
               </Typography>
             </Grid>

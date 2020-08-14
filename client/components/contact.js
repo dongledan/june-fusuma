@@ -8,12 +8,12 @@ import {Header} from './header'
 const useStyles = makeStyles(theme => ({
   form: {
     '& .MuiTextField-root': {
-      width: '50ch'
+      width: '30ch'
     }
   },
   form2: {
     '& .MuiTextField-root': {
-      width: '100ch'
+      width: '50ch'
     }
   },
   grid: {
@@ -84,7 +84,7 @@ export const Contact = () => {
         </Grid>
       </form>
       <form className={classes.form2} noValidate autoComplete="off">
-        <Grid xs={12} container className={classes.grid} direction="column">
+        <Grid container className={classes.grid} direction="column">
           <Typography variant="caption" className={classes.text}>
             YOUR MESSAGE
           </Typography>
