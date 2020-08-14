@@ -57,7 +57,7 @@ const items = [
   {
     season: '2020',
     name: 'BORN ALONE TEE',
-    imageUrl: 'https://i.imgur.com/th8WEPv.png',
+    imageUrl: 'https://i.imgur.com/Otdtzmg.png',
     price: '25.00',
     quantity: 5,
     description: '6 oz 100% ring spun cotton'
@@ -88,8 +88,32 @@ const items = [
   },
   {
     season: '2019',
-    name: 'JUNFUSUMA TEE',
-    imageUrl: 'https://i.imgur.com/MHmboii.png',
+    name: 'JUNFUSUMA CENSORED TEE',
+    imageUrl: 'https://i.imgur.com/ZYFefYg.png',
+    price: '25.00',
+    quantity: 5,
+    description: '6 oz 100% ring spun cotton'
+  },
+  {
+    season: '2019',
+    name: 'JUNFUSUMA CENSORED TEE',
+    imageUrl: 'https://i.imgur.com/tAON64n.png',
+    price: '25.00',
+    quantity: 5,
+    description: '6 oz 100% ring spun cotton'
+  },
+  {
+    season: '2019',
+    name: 'JUNFUSUMA CENSORED TEE',
+    imageUrl: 'https://i.imgur.com/EzclapV.png',
+    price: '25.00',
+    quantity: 5,
+    description: '6 oz 100% ring spun cotton'
+  },
+  {
+    season: '2019',
+    name: 'JUNFUSUMA CENSORED TEE',
+    imageUrl: 'https://i.imgur.com/C9ZH4py.png',
     price: '25.00',
     quantity: 5,
     description: '6 oz 100% ring spun cotton'
@@ -146,12 +170,21 @@ const items = [
   },
   {
     season: '2018',
-    name: 'USED CHUKKAS',
+    name: 'L USED CHUKKA',
     imageUrl: 'https://i.imgur.com/9aihmr6.png',
     price: '135.00',
     quantity: 2,
     description:
-      'Jun wore these everyday since he was born. You have the opportunity to get these size 8 boots. 1 boot per order.'
+      'Jun wore these everyday since he was born. You have the opportunity to get these size 8 left boot.'
+  },
+  {
+    season: '2018',
+    name: 'R USED CHUKKA',
+    imageUrl: 'https://i.imgur.com/cyEwvE3.png',
+    price: '135.00',
+    quantity: 2,
+    description:
+      'Jun wore these everyday since he was born. You have the opportunity to get these size 8 right boot.'
   }
 ]
 

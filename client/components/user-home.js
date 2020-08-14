@@ -6,7 +6,7 @@ import {Link} from 'react-router-dom'
 import {Typography, Grid, CssBaseline, Button} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import {Footer} from './footer'
-import {createMuiTheme} from '@material-ui/core'
+import {FeaturedProducts} from './featuredProducts'
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
     padding: 20,
     marginTop: 10,
     marginBottom: '25%',
-    fontSize: '13vh'
+    fontSize: '12vh'
   },
   button: {
     borderRadius: 50,
@@ -66,7 +66,7 @@ export const UserHome = props => {
             <Typography
               variant="h2"
               align="center"
-              style={{color: '#fff', paddingTop: 20, fontSize: '7vh'}}
+              style={{color: '#fff', paddingTop: 20, fontSize: '5vh'}}
             >
               " I MISS ROCKY "
             </Typography>
@@ -97,6 +97,7 @@ export const UserHome = props => {
           </Link>
         </Grid>
       </Grid>
+      <FeaturedProducts />
       <Footer />
     </Grid>
   )

@@ -4,8 +4,7 @@ import {
   Grid,
   Accordion,
   AccordionSummary,
-  AccordionDetails,
-  Divider
+  AccordionDetails
 } from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore'
@@ -36,7 +35,7 @@ export const FAQ = () => {
       <Grid xs={12}>
         <Header />
       </Grid>
-      <Grid xs={6}>
+      <div style={{marginLeft: '15%', marginRight: '15%'}}>
         <Typography variant="h4" align="center" className={classes.subtitle}>
           FAQ
         </Typography>
@@ -145,7 +144,7 @@ export const FAQ = () => {
             </Typography>
           </AccordionSummary>
         </Accordion>
-      </Grid>
+      </div>
       <Footer />
     </Grid>
   )

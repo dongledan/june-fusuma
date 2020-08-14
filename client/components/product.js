@@ -1,13 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {
-  Card,
-  CardActions,
-  Grid,
-  CardContent,
-  CardMedia,
-  Typography
-} from '@material-ui/core'
+import {Card, CardContent, CardMedia, Typography} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 
 const useStyles = makeStyles(muiBaseTheme => ({
@@ -45,6 +38,21 @@ export const Product = props => {
     <div style={{padding: 20}}>
       <Link to={`/shop/${product.id}`} target="_blank">
         <Card className={classes.root}>
+          {product.id === 21 && (
+            <Typography
+              variant="subtitle1"
+              style={{
+                backgroundColor: 'red',
+                color: '#fff',
+                position: 'absolute',
+                paddingLeft: 10,
+                paddingRight: 10
+              }}
+            >
+              SOLD OUT
+            </Typography>
+          )}
+
           <CardMedia
             image={product.imageUrl}
             title={product.name}
