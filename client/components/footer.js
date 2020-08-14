@@ -26,7 +26,6 @@ const useStyles = makeStyles(theme => ({
   footer: {
     padding: theme.spacing(3, 2),
     marginTop: 'auto',
-    width: '100%',
     marginBottom: 20,
     backgroundColor: '#F0F0F0',
     borderWidth: 1,
@@ -48,8 +47,10 @@ const useStyles = makeStyles(theme => ({
     margin: theme.spacing(1)
   },
   form: {
-    width: '90%',
-    marginLeft: '5%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    width: '100%',
     marginBottom: 10
   },
   button: {
@@ -60,10 +61,10 @@ const useStyles = makeStyles(theme => ({
     paddingBottom: 13,
     paddingLeft: 17,
     paddingRight: 17,
-    marginLeft: '40%',
     fontSize: 12,
     letterSpacing: 2,
     fontWeight: '100',
+    width: '19ch',
     marginBottom: 40
   },
   fixed: {

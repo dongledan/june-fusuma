@@ -10,13 +10,11 @@ import {Header} from './header'
 
 const useStyles = makeStyles(theme => ({
   form: {
-    '& .MuiTextField-root': {
-      width: '50ch'
-    }
+    '& .MuiTextField-root': {}
   },
   grid: {
     margin: 0,
-    padding: 20
+    padding: 10
   },
   text: {
     marginLeft: 16,
@@ -32,9 +30,7 @@ const useStyles = makeStyles(theme => ({
     letterSpacing: 1,
     fontWeight: '400'
   },
-  textField: {
-    width: '100ch'
-  },
+
   subtitle: {
     paddingTop: 30,
     paddingBottom: 15
@@ -154,7 +150,8 @@ const AuthForm = props => {
               inputProps={{
                 min: 0,
                 style: {
-                  textAlign: endOrStart
+                  textAlign: endOrStart,
+                  width: '25vw'
                 }
               }}
             />
@@ -172,7 +169,8 @@ const AuthForm = props => {
               inputProps={{
                 min: 0,
                 style: {
-                  textAlign: endOrStart
+                  textAlign: endOrStart,
+                  width: '25vw'
                 }
               }}
             />
