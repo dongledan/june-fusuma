@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 
 import {showSeasonThunk} from '../store/productList'
 import {Product} from './product'
-import {Grid, Typography} from '@material-ui/core'
+import {Typography} from '@material-ui/core'
 
 import {Header} from './header'
 import {Footer} from './footer'

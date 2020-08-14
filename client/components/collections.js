@@ -1,13 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import {
-  Typography,
-  Grid,
-  Card,
-  CardContent,
-  Button,
-  CardMedia
-} from '@material-ui/core'
+import {Typography, Grid, Card, Button, CardMedia} from '@material-ui/core'
 import {makeStyles} from '@material-ui/core/styles'
 
 import {Header} from './header'
