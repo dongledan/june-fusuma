@@ -61,85 +61,88 @@ class SingleProduct extends React.Component {
         <Grid
           container
           xs={12}
-          direction="row"
+          flexDirection="row-wrap"
           justify="center"
+          alignItems="center"
           style={{marginTop: 40}}
         >
-          <Card style={{width: '40%'}}>
-            <Grid container justify="flex-end">
-              <CardMedia
-                style={{height: 500, width: 500}}
-                image={product && product.imageUrl}
+          <Card style={{width: 400}}>
+            <Grid container>
+              <img
+                style={{height: '100%', width: '100%'}}
+                src={product && product.imageUrl}
                 title={product && product.name}
               />
             </Grid>
           </Card>
-          <Card style={{width: '40%', padding: '5%'}}>
-            <CardActionArea>
-              <CardContent>
-                <Typography
-                  gutterBottom
-                  align="left"
-                  variant="h4"
-                  style={{fontSize: 30}}
-                >
-                  {product && product.name}
-                </Typography>
-                <Typography
-                  gutterBottom
-                  align="left"
-                  style={{
-                    color: '#888',
-                    marginTop: -10,
-                    marginBottom: 30
-                  }}
-                >
-                  $ {product && product.price}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  align="left"
-                  gutterBottom
-                  style={{marginBottom: 30}}
-                >
-                  {product.season === '2020' ? `I MISS ROCKY` : ''}
-                </Typography>
-                {product.season !== '2020' && (
+          <Card>
+            <CardActionArea style={{width: 400, height: 400}}>
+              <Grid container style={{width: '100%'}}>
+                <CardContent>
+                  <Typography
+                    gutterBottom
+                    align="left"
+                    variant="h4"
+                    style={{fontSize: 30}}
+                  >
+                    {product && product.name}
+                  </Typography>
+                  <Typography
+                    gutterBottom
+                    align="left"
+                    style={{
+                      color: '#888',
+                      marginTop: -10,
+                      marginBottom: 30
+                    }}
+                  >
+                    $ {product && product.price}
+                  </Typography>
                   <Typography
                     variant="h6"
                     align="left"
                     gutterBottom
                     style={{marginBottom: 30}}
                   >
-                    {product.season === '2019'
-                      ? `OW. MY SHOULDER`
-                      : `TALL IN THE CAR`}
+                    {product.season === '2020' ? `I MISS ROCKY` : ''}
                   </Typography>
-                )}
-                <Typography gutterBottom variant="body2" align="left">
-                  {product && product.description}
-                </Typography>
+                  {product.season !== '2020' && (
+                    <Typography
+                      variant="h6"
+                      align="left"
+                      gutterBottom
+                      style={{marginBottom: 30}}
+                    >
+                      {product.season === '2019'
+                        ? `OW. MY SHOULDER`
+                        : `TALL IN THE CAR`}
+                    </Typography>
+                  )}
+                  <Typography gutterBottom variant="body2" align="left">
+                    {product && product.description}
+                  </Typography>
 
-                <Button
-                  align="left"
-                  onClick={this.onClick}
-                  style={{
-                    borderRadius: 50,
-                    backgroundColor: '#000',
-                    fontWeight: '100',
-                    color: '#fff',
-                    paddingLeft: 17,
-                    paddingTop: 5,
-                    paddingBottom: 5,
-                    paddingRight: 17,
-                    letterSpacing: 2,
-                    marginTop: 30,
-                    width: '19ch'
-                  }}
-                >
-                  ADD TO CART
-                </Button>
-              </CardContent>
+                  <Button
+                    align="left"
+                    onClick={this.onClick}
+                    style={{
+                      borderRadius: 50,
+                      backgroundColor: '#000',
+                      fontWeight: '100',
+                      color: '#fff',
+                      paddingLeft: 17,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      paddingRight: 17,
+                      letterSpacing: 2,
+                      marginTop: 30,
+                      width: '15ch'
+                    }}
+                  >
+                    ADD TO CART
+                  </Button>
+                </CardContent>
+              </Grid>
             </CardActionArea>
           </Card>
         </Grid>

@@ -22,8 +22,8 @@ const useStyles = makeStyles(theme => ({
   title: {
     padding: 20,
     marginTop: 10,
-    marginBottom: '30vw',
-    fontSize: '13vw'
+    marginBottom: '25%',
+    fontSize: '13vh'
   },
   button: {
     borderRadius: 50,
@@ -66,7 +66,7 @@ export const UserHome = props => {
             <Typography
               variant="h2"
               align="center"
-              style={{color: '#fff', paddingTop: 20, fontSize: '7vw'}}
+              style={{color: '#fff', paddingTop: 20, fontSize: '7vh'}}
             >
               " I MISS ROCKY "
             </Typography>
