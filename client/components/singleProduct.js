@@ -73,9 +73,9 @@ class SingleProduct extends React.Component {
               />
             </Grid>
           </Card>
-          <Card style={{marginLeft: -12}}>
-            <CardActionArea style={{width: 400, height: '100%'}}>
-              <Grid container style={{margin: 10, width: '90%'}}>
+          <Card>
+            <CardActionArea style={{width: 450, height: '100%'}}>
+              <Grid container style={{padding: 10}}>
                 <CardContent>
                   <Typography
                     gutterBottom
