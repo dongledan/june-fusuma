@@ -73,91 +73,91 @@ class SingleProduct extends React.Component {
               />
             </Grid>
           </Card>
-          <Card>
-            <CardActionArea style={{width: 450, height: '100%'}}>
-              <Grid container style={{padding: 10}}>
-                <CardContent>
-                  <Typography
-                    gutterBottom
-                    align="left"
-                    variant="h4"
-                    style={{fontSize: 30}}
-                  >
-                    {product && product.name}
-                  </Typography>
-                  <Typography
-                    gutterBottom
-                    align="left"
-                    style={{
-                      color: '#888',
-                      marginTop: -10,
-                      marginBottom: 30
-                    }}
-                  >
-                    $ {product && product.price}
-                  </Typography>
+          <Card style={{width: 450, height: 'auto'}}>
+            <CardActionArea
+              style={{width: '100%', height: '100%', padding: 10}}
+            >
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  align="left"
+                  variant="h4"
+                  style={{fontSize: 30}}
+                >
+                  {product && product.name}
+                </Typography>
+                <Typography
+                  gutterBottom
+                  align="left"
+                  style={{
+                    color: '#888',
+                    marginTop: -10,
+                    marginBottom: 30
+                  }}
+                >
+                  $ {product && product.price}
+                </Typography>
+                <Typography
+                  variant="h6"
+                  align="left"
+                  gutterBottom
+                  style={{marginBottom: 30}}
+                >
+                  {product.season === '2020' ? `I MISS ROCKY` : ''}
+                </Typography>
+                {product.season !== '2020' && (
                   <Typography
                     variant="h6"
                     align="left"
                     gutterBottom
                     style={{marginBottom: 30}}
                   >
-                    {product.season === '2020' ? `I MISS ROCKY` : ''}
+                    {product.season === '2019'
+                      ? `OW. MY SHOULDER`
+                      : `TALL IN THE CAR`}
                   </Typography>
-                  {product.season !== '2020' && (
-                    <Typography
-                      variant="h6"
-                      align="left"
-                      gutterBottom
-                      style={{marginBottom: 30}}
-                    >
-                      {product.season === '2019'
-                        ? `OW. MY SHOULDER`
-                        : `TALL IN THE CAR`}
-                    </Typography>
-                  )}
-                  <Typography gutterBottom variant="body2" align="left">
-                    {product && product.description}
+                )}
+                <Typography gutterBottom variant="body2" align="left">
+                  {product && product.description}
+                </Typography>
+                {product.id === 21 ? (
+                  <Typography
+                    style={{
+                      paddingLeft: 17,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      paddingRight: 17,
+                      letterSpacing: 2,
+                      marginTop: 30,
+                      fontSize: 20,
+                      backgroundColor: 'red',
+                      color: '#fff'
+                    }}
+                  >
+                    SOLD OUT
                   </Typography>
-                  {product.id === 21 ? (
-                    <Typography
-                      style={{
-                        paddingLeft: 17,
-                        paddingTop: 5,
-                        paddingBottom: 5,
-                        paddingRight: 17,
-                        letterSpacing: 2,
-                        marginTop: 30,
-                        fontSize: 20,
-                        backgroundColor: 'red',
-                        color: '#fff'
-                      }}
-                    >
-                      SOLD OUT
-                    </Typography>
-                  ) : (
-                    <Button
-                      align="left"
-                      onClick={this.onClick}
-                      style={{
-                        borderRadius: 50,
-                        backgroundColor: '#000',
-                        fontWeight: '100',
-                        color: '#fff',
-                        paddingLeft: 17,
-                        paddingTop: 5,
-                        paddingBottom: 5,
-                        paddingRight: 17,
-                        letterSpacing: 2,
-                        marginTop: 30,
-                        width: '15ch'
-                      }}
-                    >
-                      ADD TO CART
-                    </Button>
-                  )}
-                </CardContent>
-              </Grid>
+                ) : (
+                  <Button
+                    align="left"
+                    onClick={this.onClick}
+                    style={{
+                      borderRadius: 50,
+                      backgroundColor: '#000',
+                      fontWeight: '100',
+                      color: '#fff',
+                      paddingLeft: 17,
+                      paddingTop: 5,
+                      paddingBottom: 5,
+                      paddingRight: 17,
+                      letterSpacing: 2,
+                      marginTop: 30,
+                      width: '15ch'
+                    }}
+                  >
+                    ADD TO CART
+                  </Button>
+                )}
+              </CardContent>
             </CardActionArea>
           </Card>
         </Grid>

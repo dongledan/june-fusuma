@@ -133,7 +133,7 @@ export const FeaturedProducts = () => {
 
 const products = [
   {
-    id: 1,
+    id: 2,
     season: '2020',
     name: 'LITTLE PRODIGY L/S',
     imageUrl: 'https://i.ibb.co/9gWpRgH/ljb.png',
@@ -143,7 +143,7 @@ const products = [
       'It takes 10,000 hours to become an expert. Have you been putting in the work? Chances are, some little asian boy is already better than you.'
   },
   {
-    id: 2,
+    id: 1,
     season: '2020',
     name: 'BOB ROSS PAINTS JUN TEE',
     imageUrl: 'https://i.imgur.com/LAGuAUC.png',
